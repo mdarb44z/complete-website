@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}☕Review☕{% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/review.css' %}">
+
+{% endblock head %}
+
+{% block body %}
+<div class="bd">
+    <!-- Welcome To ☕Review Page☕ -->
+    <!-- Write your Code here -->
+    <h1 style="color:crimson;">CUSTOMER'S <span style="color: aqua;">REVIEW</span></h1>
+    <div class="review">
+        <h1>Review</h1>
+
+        <p style="color: aqua">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate eaque accusamus
+            perspiciatis nesciunt sapiente, possimus voluptas. Laborum vero cumque praesentium,
+            facilis animi, earum ea vitae asperiores laboriosam obcaecati reiciendis maiores.</p>
+
+        <img class="user" src="{% static  'img/home.jpg' %}" alt="" />
+        <br>
+        <br>
+        <h3 class="name">Aman Sharma</h3>
+
+
+    </div>
+
+    <div class="review">
+        <h1>Review</h1>
+
+        <p style="color: aqua">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate eaque accusamus
+            perspiciatis nesciunt sapiente, possimus voluptas. Laborum vero cumque praesentium,
+            facilis animi, earum ea vitae asperiores laboriosam obcaecati reiciendis maiores.</p>
+
+        <img class="user" src="{% static  'img/home.jpg' %}" alt="" />
+        <br>
+        <br>
+        <h3 class="name">Aman Sharma</h3>
+
+
+    </div>
+
+    <div class="review">
+        <h1>Review</h1>
+
+        <p style="color: aqua">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate eaque accusamus
+            perspiciatis nesciunt sapiente, possimus voluptas. Laborum vero cumque praesentium,
+            facilis animi, earum ea vitae asperiores laboriosam obcaecati reiciendis maiores.</p>
+
+        <img class="user" src="{% static  'img/home.jpg' %}" alt="" />
+        <br>
+        <br>
+        <h3 class="name">Aman Sharma</h3>
+
+
+    </div>
+
+    <div class="review">
+        <h1>Review</h1>
+
+        <p style="color: aqua">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate eaque accusamus
+            perspiciatis nesciunt sapiente, possimus voluptas. Laborum vero cumque praesentium,
+            facilis animi, earum ea vitae asperiores laboriosam obcaecati reiciendis maiores.</p>
+
+        <img class="user" src="{% static  'img/home.jpg' %}" alt="" />
+        <br>
+        <br>
+        <h3 class="name">Aman Sharma</h3>
+
+
+    </div>
+    {% for a in data %}
+    <div class="review">
+        <h1>Review</h1>
+
+        <p style="color: aqua">{{a.desc}} </p>
+
+        <img class="user" src="{% static  'img/home.jpg' %}" alt="" />
+        <br>
+        <br>
+        <h3 class="name">{{a.name}} </h3>
+    </div>
+
+    
+    {% endfor %}
+    
+
+
+
+
+
+
+
+
+    <div style="background-color:#000000b0;color: white;border: 2px solid darkcyan;
+    width: 90%;padding: 1%;margin: 2% 4%;float: left;">
+        <h1>Give Your Review</h1>
+        <form action="/review" method="POST">
+            {% csrf_token %}
+
+            <input style="width: 80%;padding: 10px;border: none;border-radius: 5px;
+            margin-bottom: 10px;background-color: #6df2fffc;color: white;" 
+            type="text" placeholder="Name" id="name" name="name" required><br>
+
+            <textarea  style="width: 80%;padding: 10px;border: none;border-radius: 5px;
+            margin-bottom: 10px;background-color: #6df2fffc;color: white;" 
+             placeholder="Write Your Review Here" name="msg" ></textarea><br>
+
+            <button type="submit" class="btn btn-success" >Submit Review</button>
+          </form>
+    </div>
+
+
+    
+
+    </div>
+    
+
+
+
+
+
+
+</div>
+
+
+{% endblock body %}

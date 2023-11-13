@@ -1,0 +1,35 @@
+.slogan-container {
+    margin-top: 10%;
+    float: left;
+    margin-left: 20%;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .slogan-container h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slogan-container p {
+    font-size: 24px;
+    margin: 10px 0;
+    padding: 0;
+  }
+  
+  .get-now-btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 30px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .get-now-btn:hover {
+    background-color: #f00;
+    color: #fff;
+  }

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
+    <style>
+      
+    </style>
+</head>
+<body  id="bg"  >
+    {% for message in messages %}
+    <div style=" background:black; color:white" class="alert alert-warning {{message.tags}} alert-dismissible fade show" role="alert">
+        <h3>
+        <strong>{{message}}</strong></h3>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+    {% endfor %}
+    <form action="/login" method="POST">
+        {% csrf_token %}
+        <h1>Login</h1>
+        <span>Name</span>
+        <input type="text" placeholder="User Name" name="username" ><br><br>
+        <span>Password</span>
+        <input type="password" placeholder="Password" name="pass1" ><br><br>
+        <button type="submit" class="but" >Login</button><br><br>
+        <label  for="">New User?</label>
+        <a href="/signup">Sign Up</a>
+    </form>
+    <label  style="color: white;" for="">Click To Go To Home Page</label>
+    <a  href="/">Home</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: aqua;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../img/wallpaperflare.com_wallpaper\(7\).jpg');
+}
+.bg{
+    text-align: center;
+
+}
+.contain{
+    height: 100vh;
+    margin: 1% 5%;
+}
+.rows{
+    background-color: rgba(0, 0, 0, 0.498);
+}
+.cart{
+    background-color: #00000099;
+    width: 27%;
+    color: aqua;
+    margin: 2% 2%;
+    text-align: center;
+    height: auto;
+    float: left;
+    border: 2px solid white;
+    min-width:250px;
+}
+.photo{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.desc{
+    padding: 2%;
+}

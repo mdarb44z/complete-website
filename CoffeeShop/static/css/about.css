@@ -1,0 +1,58 @@
+.p1{
+    font-size: 30px;
+}
+.d1{
+    height: 400px;
+    width: 40%;
+    color: black; 
+    margin-left: 20px;
+    margin-top: 50px;
+    float: left;
+}
+.im{
+    height: 90%;
+    width: 90%;
+}
+
+
+.h1{
+    align-self: center;
+    color: chocolate;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+#myBtn{
+    background-color: chocolate;
+    color:white;
+    padding: 10px 15px;
+    margin: 15px;
+    border-radius: 5px;
+    margin-left: 1100px;
+}
+#myBtn:hover{
+    background-color: black;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.d2{
+    height: 400px;
+    width: 50%;
+    float: left;
+    background-image: url('../img/new.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    border-style: groove;
+    
+}
+body{
+    background-color:darkcyan;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../img/.jpg');
+
+}
+.b{
+    height: 200px;
+    width: 20%;
+}

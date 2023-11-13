@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Coffee Cartel - Payment Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/payment.css' %}">
+    <style>
+      input[type='text'],[type='date'] {
+        background-color: #f7f7f7f7;
+        width: 20%;
+        height: 30px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Coffee Cartel</div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu">Menu</a></li>
+          <li><a href="/review">review</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="head">
+        <h1>Payment</h1>
+      </div>
+      <img src="{% static 'img/image8.gif' %}" alt="Coffee" width="500" height="300">
+
+      <form action="/payment" method="POST">
+        {% csrf_token %}
+        <h2>Payment Details</h2>
+        <label for="name">Name on Card:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="card">Card Number:</label>
+        <input type="text" id="card" name="cnum" required>
+        <label for="expiry">Expiration Date:</label>
+        <input type="date" id="expiry" name="edate" placeholder="MM/YY" required>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+        <button type="submit" class="payment-button" id="payment-button">Pay Now</button>
+      </form>
+
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <h2>Payment Successful</h2>
+          <p>Thank you for your payment. Your order will be processed shortly.</p>
+          <span class="popup-close" id="popup-close">&times;</span>
+        </div>
+        <div class="overlay"></div>
+      </div>
+      </form>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+      <div class="contact">
+        <span>Email: info@coffeecartel.com</span>
+        <span>Phone: 555-1234</span>
+      </div>
+    </footer>
+
+    <!-- Popup message -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="hidePopup()">&times;</span>
+        <p>Payment successful!</p>
+      </div>
+    </div>
+
+    <script>
+      {% comment %} // Show popup message on payment success
+      function showPopup() {
+        document.getElementById("popup").style.display = "block";
+      }
+
+      // Hide popup message
+      function hidePopup() {
+        document.getElementById("popup").style.display = "none"; {% endcomment %}
+        {% comment %}
+      } {% endcomment %}
+      const paymentForm = document.getElementById('payment-form');
+      const paymentButton = document.getElementById('payment-button');
+      const popup = document.getElementById('popup');
+      const popupClose = document.getElementById('popup-close');
+
+      paymentForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        // simulate payment processing for 3 seconds
+        setTimeout(() => {
+          popup.style.display = 'flex';
+        }, 3000);
+      });
+
+      popupClose.addEventListener('click', () => {
+        popup.style.display = 'none';
+      });
+
+    </script>
+
+  </body>
+
+</html>

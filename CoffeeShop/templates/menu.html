@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}☕Menu☕{% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
+
+{% endblock head %}
+
+{% block body %}
+<!-- Welcome To ☕Menu Page☕ -->
+<!-- Write your Code here -->
+<div class="head">
+  <h1>Menu</h1>
+</div>
+
+<main>
+  <section class="drink">
+    <img src="{% static 'img/latte.jpeg' %}" alt="Latte">
+    <div class="drink-info">
+      <h2>Latte</h2>
+      <p>A smooth and creamy coffee with espresso and steamed milk.</p>
+      <span class="price">₹ 99</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+  <section class="drink">
+    <img src="{% static 'img/cappuccino.jpeg' %}" alt="Cappuccino">
+    <div class="drink-info">
+      <h2>Cappuccino</h2>
+      <p>A classic Italian coffee with espresso, steamed milk, and frothed milk.</p>
+      <span class="price">₹ 120</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+  <!-- Add more sections for other drinks -->
+  <section class="drink">
+    <img src="{% static 'img/espresso.jpeg' %}" alt="Espresso">
+    <div class="drink-info">
+      <h2>Espresso</h2>
+      <p>A strong and concentrated coffee made with finely ground beans and hot water.</p>
+      <span class="price">₹ 135</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+  <section class="drink">
+    <img src="{% static 'img/americano.jpeg' %}" alt="Americano">
+    <div class="drink-info">
+      <h2>Americano</h2>
+      <p>A coffee drink made by diluting espresso with hot water, giving it a similar strength to traditional drip
+        coffee.</p>
+      <span class="price">₹ 150</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+  <section class="drink">
+    <img src="{% static 'img/macchiato.jpeg' %}" alt="Macchiato">
+    <div class="drink-info">
+      <h2>Macchiato</h2>
+      <p>A coffee drink made with a shot of espresso and a small amount of milk foam on top.</p>
+      <span class="price">₹ 110</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+  <section class="drink">
+    <img src="{% static 'img/mocha2.jpeg' %}" alt="Mocha">
+    <div class="drink-info">
+      <h2>Mocha</h2>
+      <p>A coffee drink made with espresso, chocolate syrup, and steamed milk.</p>
+      <span class="price">₹ 199</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+  <section class="drink">
+    <img src="{% static 'img/frappuccino3.jpeg' %}" alt="Frappuccino">
+    <div class="drink-info">
+      <h2>Frappuccino</h2>
+      <p>A blended coffee drink made with espresso, milk, and ice, often topped with whipped cream.</p>
+      <span class="price">₹ 249</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+  <section class="drink">
+    <img src="{% static 'img/smoothies.jpeg' %}" alt="coffee smoothies">
+    <div class="drink-info">
+      <h2>Coffee Smoothies</h2>
+      <p>Coffee smoothies uses the blending of coffee with ice and milk.</p>
+      <span class="price">₹ 275</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+  <section class="drink">
+    <img src="{% static 'img/coconut.jpeg' %}" alt="Caramel">
+    <div class="drink-info">
+      <h2>Caramel Coconut Iced Coffee</h2>
+      <p>The mixing together of coconut milk and coffee powder is the perfect alternative to milk-based cold coffee.</p>
+      <span class="price">₹ 299</span>
+      {% if not request.user.is_authenticated %}
+      <button class="buy-btn" onclick="location.href='/login'">Login to Buy Now</button>
+      {% else %}
+      <button class="buy-btn" onclick="location.href='/payment'">Buy Now</button>
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+{% endblock body %}

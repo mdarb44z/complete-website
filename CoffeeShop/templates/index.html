@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}☕The Coffee Cartel☕{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+{% endblock head %}
+
+{% block body %}
+
+    <div class="slogan-container">
+      <h1>The Coffee Cartel</h1>
+      <h1>Great coffee, great day</h1>
+      <p>Discover the best coffee in town</p>
+      <a href="/menu" class="get-now-btn">Get Now</a>
+    </div>
+
+
+{% endblock body %}

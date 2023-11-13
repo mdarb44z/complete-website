@@ -1,0 +1,122 @@
+body {
+    background-color: transparent;
+    background-image: url("{% static 'img/3444096.jpg' %}");
+    background-image: url(../img/3444096.jpg);
+    background-size: 100% 100%;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container-1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.map img {
+    width: 100%;
+}
+
+.form {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7B3F00;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+label {
+    width: 100%;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #7B3F00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #562107;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .map,
+    .form {
+        width: 100%;
+    }
+}
+
+header {
+    background-color: transparent;
+    background-image: url("{% static 'img/3444096.jpg' %}");
+
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#message {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#message p {
+    margin: 0;
+}

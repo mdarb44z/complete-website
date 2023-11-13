@@ -1,0 +1,54 @@
+body{
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../img/imglogin.jpg');
+    font-family: Arial, sans-serif;
+
+}
+form{
+    margin: 0px 150px 0px 0px ;
+    float: right;
+    font-size:large ;
+    color:antiquewhite;
+    font-weight: bolder;
+}
+input,button{
+    width: 100%;
+    font-size:large ;
+    color:black;
+    font-weight: bolder;
+    background-color:antiquewhite;
+}
+.but{
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+    border: 1px solid greenyellow;
+}
+.but:hover {
+    background-color:red;
+    color: #f7f7f7;
+    border-radius: 20px;
+  }
+#bg{
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+label {
+    display: block;
+    color: dark brown;
+}
+
+
+input[type="text"], input[type="email"], input[type="password"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+}

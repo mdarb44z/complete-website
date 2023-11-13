@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}☕Products☕{% endblock title %}
+{% block head %} 
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+
+<script src="https://kit.fontawesome.com/d9b0c0cca9.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+{% endblock head %}
+
+{% block body %}
+<!-- Write your Code here -->
+<div class="bg">
+    <div class="heading">
+       <h1>Our Populars</h1>
+    </div>
+    <!-- first row images -->
+    <div class="img">
+       <img src="{% static 'img/latteart.jpg' %}" class="img1">
+       <h5 class="card-title"><b>Latte Art</b></h5>
+       <p class="card-text small">With supporting text below as a<br>natural lead-in to additional content.</p>
+       <p class="tags">Price ₹199</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+       
+    </div>
+    
+    <div class="img">
+       <img src="{% static 'img/mus.jpg' %}" class="img1">
+       <h5 class="card-title"><b>Mushroom Coffee</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹299</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+    </div>
+ 
+    <div class="img">
+       <img src="{% static 'img/rage.jpg' %}" class="img1">
+       <h5 class="card-title"><b>Rage Coffee</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹349</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+ 
+    </div>
+ 
+    <div class="img">
+       <img src="{% static 'img/costa.jpg' %}" class="img1">
+       <h5 class="card-title"><b>Costa Coffee</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹180</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+            
+ 
+    </div>
+ 
+    <div class="img">
+       <img src="{% static 'img/dark.jpg' %}" class="img1">
+       <h5 class="card-title"><b>Dark Coffee</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹499</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+ 
+    </div>
+ 
+    <!-- End First row images -->
+ 
+    <!-- second row image -->
+ 
+    <div class="img">
+       <img src="{% static 'img/continental.jpg' %}" class="img2">
+       <h5 class="card-title"><b>Continental Coffee</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹899</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+ 
+    </div>
+ 
+    <div class="img">
+       <img src="{% static 'img/davidoff.jpg' %}" class="img2">
+       <h5 class="card-title"><b>David Off Coffee</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹600</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+ 
+    </div>
+ 
+    <div class="img">
+       <img src="{% static 'img/country.png' %}" class="img2">
+       <h5 class="card-title"><b>Country Bean</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹200</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+ 
+    </div>
+ 
+    <div class="img">
+       <img src="{% static 'img/Bevzilla.jpg' %}" class="img2">
+       <h5 class="card-title"><b>Bevzilla Decoction</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹650</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+ 
+    </div>
+ 
+    <div class="img">
+       <img src="{% static 'img/meraki.jpeg' %}" class="img2">
+       <h5 class="card-title"><b>Meraki Decoction</b></h5>
+       <p class="card-text small">With supporting text below as a<br> natural lead-in to additional content.</p>
+       <p class="tags">Price ₹700</p>
+       {% if not request.user.is_authenticated %}
+       <a href="#" onclick="location.href='/login'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Login to Buy</a>
+       {% else %}
+       <a href="#" onclick="location.href='/payment'" onclick="location.href='/payment'" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy Now</a>
+       {% endif %}
+       
+ 
+    </div>
+ </div>
+ 
+ <!-- End second row images -->
+ 
+ <div class="a">
+    <div class="txt">
+       <h2 class="news" style="color:white;"><b>Subscribe</b></h2>
+       <h2 clas="newss" style="color:#242424;"><b>Weekly Newsletter</b></h2>
+    </div>
+ 
+    <div class="line">
+       <input type="text" placeholder="Enter your Email" name="email" class="inp">
+    </div>
+ 
+    <div class="but1">
+       <button type="submit" class="but">Subscribe</button>
+    </div>
+    <div class="icon" style="float:left; margin-left:7%; ">
+       <a href="#" class="social-icon"><i class="fa fa-facebook-f"></i></a>
+       <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+       <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+       <a href="#" class="social-icon"><i class="fa fa-google-plus"></i></a>
+       <a href="#" class="social-icon"><i class="fa fa-youtube"></i></a>
+    </div>
+ 
+ </div>
+ 
+ <section class="page-section subscribe-section">
+    <div class="container">
+       <div class="row">
+ 
+          <div class="col-lg-4">
+             <img src="{% static 'img/savannahwhite.png' %}">
+             <p class="logo-text-white">Need! A Hot cup of happiness with delicious taste then visit our new cafe Savannah located at ECAF Street Avenue, Sakchi, Jamshedpur. </p>
+          </div>
+ 
+          <div class="col-lg-4">
+             <h3 class="contact-heading">EXPLORE</h3>
+             <div class="row">
+                <div class="col-lg-6">
+                   <p><a class="explore-link" href="/"> > <b>Home</b></a></p>
+                   <p><a class="explore-link" href="/contact"> > <b>Contact Us</b></a></p>
+                   <p><a class="explore-link" href="/products"> > <b>Products</b></a></p>
+                </div>
+ 
+                <div class="col-lg-6">
+                   <p><a class="explore-link" href="/blog"> > <b>Blog</b></a></p>
+                   <p><a class="explore-link" href="/about"> > <b>About Us</b></a></p>
+                   <p><a class="explore-link" href="/menu"> > <b>Gallery</b></a></p>
+                </div>
+ 
+             </div>
+          </div>
+ 
+          <div class="col-lg-4">
+             <h3 class="contact-heading">CONTACT US</h3>
+             <p class="contact-info"><i class="fa fa-map-marker"></i>  EFAB Estate Avenue, Bistupur, Jamshedpur</p>
+             <p class="contact-info"><i class="fa fa-phone"></i> +91 8825110845 ,+91 7250198552 ,+91 9128554397,+91 6204430205</p>
+             <p class="contact-info"><i class="fa fa-envelope"></i>  info@coffeecartelcafe.com</p>
+             <p class="contact-info"><i class="fa fa-globe"></i> www.coffeecartelcafe.com</p>
+          </div>
+       </div>
+    </div>
+    <div class="owners">
+       <h3 class="ow">Owners</h3>
+    </div>
+    <div class="adnan">
+       Md Adnan Hussain Ansari
+    </div>
+    <div class="aman">
+       Aman Kumar Sharma
+    </div>
+    <div class="anjan">
+       Anjan Kumar
+ 
+    </div>
+    <div class="arbaaz">
+       Md Arbaaz Alam
+    </div>
+ 
+ </section>
+ 
+ <footer class="footer-info pt-5 py-4">
+    <div class="container">
+       <div class="small text-center text-muted">
+          <span class="footer-title">Coffee Cartel Cafe </span> <span class="copyright">&copy; All Right Reserved 2023</span>
+       </div>
+    </div>
+ </footer>
+
+
+
+
+
+{% endblock body %}
